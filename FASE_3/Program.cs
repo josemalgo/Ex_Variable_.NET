@@ -8,7 +8,7 @@ namespace FASE_3
 
         static void Main(string[] args)
         {
-            int START_YEAR;
+            int startYear;
             
             bool validLeapYear = false;
             var affirmMessage = "El meu any de naixement és de traspas.";
@@ -19,16 +19,16 @@ namespace FASE_3
             var fullName = name + " " + surname + " " + secondSurname;
             var birthdate = day + "/" + month + "/" + year;
 
-            for (START_YEAR = 1948; START_YEAR <= YEAR_BIRTH; START_YEAR++)
+            for (startYear = 1948; startYear <= YEAR_BIRTH; startYear++)
             {
-                if (((START_YEAR % 4 == 0) && (START_YEAR % 100 != 0)) || (START_YEAR % 400 == 0))
+                if (((startYear % 4 == 0) && (startYear % 100 != 0)) || (startYear % 400 == 0))
                 {
-                    if(START_YEAR == YEAR_BIRTH)
+                    if(startYear == YEAR_BIRTH)
                     {
                         validLeapYear = true;
                     }
 
-                    Console.WriteLine(START_YEAR);
+                    Console.WriteLine(startYear);
                 }
             }
 
